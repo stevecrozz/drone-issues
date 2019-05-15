@@ -1,0 +1,13 @@
+kind: pipeline
+name: default
+steps:
+  - name: first
+    image: alpine
+    commands:
+      - echo "Ran the first step"
+  - name: second
+    depends_on: [ first ]
+    image: alpine
+    commands:
+      - echo "Running the second step"
+      - sleep 900
