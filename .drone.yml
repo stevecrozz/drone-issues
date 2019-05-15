@@ -6,7 +6,6 @@ steps:
     commands:
       - echo "Ran the first step"
   - name: second
-    depends_on: [ first ]
     image: alpine
     commands:
       - echo "Running the second step"
